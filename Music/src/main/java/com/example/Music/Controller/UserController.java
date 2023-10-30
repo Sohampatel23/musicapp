@@ -11,6 +11,8 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class UserController {
     @Autowired
@@ -42,4 +44,10 @@ public class UserController {
     }
 
 
+    @GetMapping("getAllPlaylist")
+    public List<Playlist> getPlaylist(@RequestParam String email, @RequestParam String tokenValue)
+    {
+
+        return userService.getPlaylist(email,tokenValue);
+    }
 }

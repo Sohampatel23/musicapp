@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 @Service
 public class UserService {
@@ -93,12 +94,25 @@ public class UserService {
     public String addToPlaylist(String email, String tokenValue, Playlist playlist) {
         if (tokenService.authenticate(email, tokenValue)) {
 
-            playlistService.addToPlaylist(playlist);
+            return playlistService.addToPlaylist(playlist);
 
 
         } else {
             return "Un Authenticated access!!!";
         }
-        return email;
+
+    }
+
+    public List<Playlist> getPlaylist(String email, String tokenValue) {
+        if (tokenService.authenticate(email, tokenValue)) {
+
+           return playlistService.getPlaylist();
+
+
+        } else {
+
+        }
+
+        return null;
     }
 }

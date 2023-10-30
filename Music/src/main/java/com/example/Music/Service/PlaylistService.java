@@ -6,6 +6,8 @@ import com.example.Music.Repo.IPlaylistRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PlaylistService {
     @Autowired
@@ -13,5 +15,9 @@ public class PlaylistService {
     public String addToPlaylist(Playlist playlist) {
         iPlaylistRepo.save(playlist);
         return "Added to playlist";
+    }
+
+    public List<Playlist> getPlaylist() {
+    return (List<Playlist>) iPlaylistRepo.findAll();
     }
 }
