@@ -24,3 +24,23 @@ Whole Project is built in spring boot application with IDE of Intellij Idea. Whi
 And also Repo class extends CrudRepository for to simplify database operations
 
 Moreover this project is connected with live server and public IP using AWS and can be easily accessible by anyone.
+## 🚀 About Me
+I'm a full stack developer, Passionate Android Developer | Backend Architect | Code Enthusiast
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at sohampatel.1324@gmail.com
+
+
+## Roadmap
+
+- spring initializer
+
+- Intellij idea platform
+-
+- ![sss](https://github.com/Sohampatel23/musicapp/assets/66545109/d20c0268-3c50-4ac1-b359-a1ebe6ac8883)
+
+
+
+
